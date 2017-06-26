@@ -11,7 +11,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),mt6582)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),mt6589)
 
 ifneq ($(BOARD_HAVE_BLUETOOTH_MTK),)
 
