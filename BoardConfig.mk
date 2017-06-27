@@ -1,5 +1,5 @@
 # inherit from the proprietary version
--include vendor/Xiaomi/HM2014011/BoardConfigVendor.mk
+-include vendor/xiaomi/HM2013023/BoardConfigVendor.mk
 
 LOCAL_PATH := device/xiaomi/HM2013023
 
