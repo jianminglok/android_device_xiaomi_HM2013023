@@ -7,9 +7,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := --compiler-filter=interpret-only
 # $(call add-product-dex-preopt-module-config,services,--compiler-filter=space)
 
-$(call inherit-product-if-exists, vendor/Xiaomi/HM2014011/HM2014011-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/HM2013023/HM2013023-vendor.mk)
 
-LOCAL_PATH := device/Xiaomi/HM2014011
+LOCAL_PATH := device/xiaomi/HM2013023
 
 PRODUCT_CHARACTERISTICS := default
 
@@ -29,7 +29,7 @@ PRODUCT_PACKAGES += \
     libxlog
 
 PRODUCT_PACKAGES += \
-    lights.mt6582
+    lights.mt6589
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -40,7 +40,7 @@ PRODUCT_PACKAGES += \
     tinymix
 
 PRODUCT_PACKAGES += \
-    audio.primary.mt6582
+    audio.primary.mt6589
 
 PRODUCT_PACKAGES += \
     audio_policy.default
@@ -64,23 +64,21 @@ PRODUCT_COPY_FILES += \
 # GSM
 #PRODUCT_PACKAGES += \
 #    gsm0710muxd
-PRODUCT_PACKAGES += libmt6582
+PRODUCT_PACKAGES += libmt6589
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=MediaTekRIL
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    fstab.mt6582 \
-    init.recovery.mt6582.rc \
-    init.mt6582.rc \
-    init.mt6582_common.rc \
+    fstab \
+    init.recovery.rc \
+    init.rc \
     init.modem.rc \
-    ueventd.mt6582.rc \
-    init.mt6582.usb.rc \
+    ueventd.rc \
+    init.usb.rc \
     enableswap.sh \
-    factory_init.rc \
-    twrp.fstab
+    factory_init.rc
 
 # Kernel
 PRODUCT_COPY_FILES += \
@@ -143,10 +141,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_PROPERTY_OVERRIDES := \
-	ro.mediatek.version.release=ALPS.W10.24.p0 \
-	ro.mediatek.platform=MT6582 \
+	ro.mediatek.version.release=ALPS.KK1.MP5.V1.5 \
+	ro.mediatek.platform=MT6589 \
 	ro.mediatek.chip_ver=S01 \
-	ro.mediatek.version.branch=KK1.MP1 \
+	ro.mediatek.version.branch=KK1.MP5 \
 	ro.mediatek.version.sdk=2 \
 	ro.telephony.sim.count=2 \
 	ro.allow.mock.location=0 \
@@ -156,8 +154,8 @@ PRODUCT_PROPERTY_OVERRIDES := \
 	persist.service.debuggable=1 \
 	persist.mtk.wcn.combo.chipid=-1
 
-PRODUCT_NAME := full_HM2014011
-PRODUCT_DEVICE := HM2014011
+PRODUCT_NAME := full_2013023
+PRODUCT_DEVICE := HM2013023
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
