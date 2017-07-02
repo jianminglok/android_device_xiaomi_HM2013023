@@ -28,17 +28,17 @@ on early-init
 on early_property:ro.build.type=user
     write /proc/bootprof "INIT: user build setting"
     export BOOTCLASSPATH /system/framework/core.jar:/system/framework/conscrypt.jar:/system/framework/okhttp.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/framework2.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/mms-common.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/webviewchromium.jar:/system/framework/mediatek-common.jar:/system/framework/mediatek-framework.jar:/system/framework/CustomProperties.jar:/system/framework/mediatek-telephony-common.jar:/system/framework/mediatek-tablet.jar:/data/app/com.miui.core-1.apk:/data/app/com.miui.core-2.apk:/system/app/miui.apk:/data/app/com.miui.system-1.apk:/data/app/com.miui.system-2.apk:/system/app/miuisystem.apk
-    export BOOTCLASSPATH_EX /system/framework/mediatek-op.jar
+    #export BOOTCLASSPATH_EX /system/framework/mediatek-op.jar
 
 on early_property:ro.build.type=userdebug
     write /proc/bootprof "INIT: userdebug build setting"
     export BOOTCLASSPATH /system/framework/core.jar:/system/framework/conscrypt.jar:/system/framework/okhttp.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/framework2.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/mms-common.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/webviewchromium.jar:/system/framework/mediatek-common.jar:/system/framework/mediatek-framework.jar:/system/framework/CustomProperties.jar:/system/framework/mediatek-telephony-common.jar:/system/framework/mediatek-tablet.jar:/data/app/com.miui.core-1.apk:/data/app/com.miui.core-2.apk:/system/app/miui.apk:/data/app/com.miui.system-1.apk:/data/app/com.miui.system-2.apk:/system/app/miuisystem.apk
-    export BOOTCLASSPATH_EX /system/framework/mediatek-op.jar
+    #export BOOTCLASSPATH_EX /system/framework/mediatek-op.jar
 
 on early_property:ro.build.type=eng
     write /proc/bootprof "INIT: eng build setting"
     export BOOTCLASSPATH /system/framework/core.jar:/system/framework/conscrypt.jar:/system/framework/okhttp.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/framework2.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/mms-common.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/webviewchromium.jar:/system/framework/mediatek-common.jar:/system/framework/mediatek-framework.jar:/system/framework/CustomProperties.jar:/system/framework/mediatek-telephony-common.jar:/system/framework/mediatek-tablet.jar:/system/framework/emma.jar:/data/app/com.miui.core-1.apk:/data/app/com.miui.core-2.apk:/system/app/miui.apk:/data/app/com.miui.system-1.apk:/data/app/com.miui.system-2.apk:/system/app/miuisystem.apk
-    export BOOTCLASSPATH_EX /system/framework/mediatek-op.jar
+    #export BOOTCLASSPATH_EX /system/framework/mediatek-op.jar
 
 on early_property:ro.hardware=*
     setprop ro.mtk.hardware mt6589
@@ -1582,4 +1582,4 @@ service MtkCodecService /system/bin/MtkCodecService
     user root
     group audio media sdcard_r
 
-import /init.miui.rc
+#import /init.miui.rc
