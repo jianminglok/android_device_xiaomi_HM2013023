@@ -75,10 +75,20 @@ PRODUCT_PACKAGES += \
     init.recovery.rc \
     init.rc \
     init.modem.rc \
+    meta_init.rc \
+    meta_init.modem.rc \
     ueventd.rc \
     init.usb.rc \
     enableswap.sh \
-    factory_init.rc
+    factory_init.rc \
+    init.aee.customer.rc \
+    init.no_ssd.rc \
+    init.project.rc \
+    meta_init.project.rc \
+    init.protect.rc \
+    init.trace.rc \
+    init.xlog.rc \
+    
 
 # Kernel
 PRODUCT_COPY_FILES += \
